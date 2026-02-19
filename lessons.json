@@ -1,0 +1,2599 @@
+[
+  {
+    "vietnamese": "là",
+    "english": "iron, is, am",
+    "frequency": 431,
+    "type": "word",
+    "tier": 1
+  },
+  {
+    "vietnamese": "nó",
+    "english": "he, she, it (informal)",
+    "frequency": 373,
+    "type": "word",
+    "tier": 1
+  },
+  {
+    "vietnamese": "không",
+    "english": "no, not",
+    "frequency": 311,
+    "type": "word",
+    "tier": 1
+  },
+  {
+    "vietnamese": "cái",
+    "english": "classifier (for objects)",
+    "frequency": 303,
+    "type": "word",
+    "tier": 1
+  },
+  {
+    "vietnamese": "này",
+    "english": "this",
+    "frequency": 296,
+    "type": "word",
+    "tier": 1
+  },
+  {
+    "vietnamese": "mà",
+    "english": "but, that, which",
+    "frequency": 213,
+    "type": "word",
+    "tier": 1
+  },
+  {
+    "vietnamese": "con",
+    "english": "child, offspring",
+    "frequency": 179,
+    "type": "word",
+    "tier": 1
+  },
+  {
+    "vietnamese": "mẹ",
+    "english": "mother, mom",
+    "frequency": 178,
+    "type": "word",
+    "tier": 1
+  },
+  {
+    "vietnamese": "cái này",
+    "english": "this one",
+    "frequency": 175,
+    "type": "word",
+    "tier": 1
+  },
+  {
+    "vietnamese": "đấy",
+    "english": "there, that (emphatic)",
+    "frequency": 174,
+    "type": "word",
+    "tier": 1
+  },
+  {
+    "vietnamese": "thế",
+    "english": "so, like that, such",
+    "frequency": 166,
+    "type": "word",
+    "tier": 1
+  },
+  {
+    "vietnamese": "đây",
+    "english": "here",
+    "frequency": 165,
+    "type": "word",
+    "tier": 1
+  },
+  {
+    "vietnamese": "cho",
+    "english": "for, give",
+    "frequency": 161,
+    "type": "word",
+    "tier": 1
+  },
+  {
+    "vietnamese": "bố",
+    "english": "father, dad",
+    "frequency": 142,
+    "type": "word",
+    "tier": 1
+  },
+  {
+    "vietnamese": "rồi",
+    "english": "already",
+    "frequency": 136,
+    "type": "word",
+    "tier": 1
+  },
+  {
+    "vietnamese": "đi",
+    "english": "go (imperative)",
+    "frequency": 135,
+    "type": "word",
+    "tier": 1
+  },
+  {
+    "vietnamese": "có",
+    "english": "yes, have",
+    "frequency": 121,
+    "type": "word",
+    "tier": 1
+  },
+  {
+    "vietnamese": "à",
+    "english": "oh (particle)",
+    "frequency": 118,
+    "type": "word",
+    "tier": 1
+  },
+  {
+    "vietnamese": "thì",
+    "english": "then",
+    "frequency": 115,
+    "type": "word",
+    "tier": 1
+  },
+  {
+    "vietnamese": "để",
+    "english": "to, in order to, let",
+    "frequency": 113,
+    "type": "word",
+    "tier": 1
+  },
+  {
+    "vietnamese": "của",
+    "english": "of, belonging to",
+    "frequency": 100,
+    "type": "word",
+    "tier": 1
+  },
+  {
+    "vietnamese": "được",
+    "english": "can, okay, able",
+    "frequency": 93,
+    "type": "word",
+    "tier": 1
+  },
+  {
+    "vietnamese": "phải",
+    "english": "right",
+    "frequency": 88,
+    "type": "word",
+    "tier": 1
+  },
+  {
+    "vietnamese": "ra",
+    "english": "exit, go out",
+    "frequency": 87,
+    "type": "word",
+    "tier": 1
+  },
+  {
+    "vietnamese": "vào",
+    "english": "enter, go in",
+    "frequency": 82,
+    "type": "word",
+    "tier": 1
+  },
+  {
+    "vietnamese": "thôi",
+    "english": "enough, stop, only",
+    "frequency": 78,
+    "type": "word",
+    "tier": 1
+  },
+  {
+    "vietnamese": "đâu",
+    "english": "where",
+    "frequency": 71,
+    "type": "word",
+    "tier": 1
+  },
+  {
+    "vietnamese": "ấy",
+    "english": "that, those",
+    "frequency": 70,
+    "type": "word",
+    "tier": 1
+  },
+  {
+    "vietnamese": "nhưng",
+    "english": "but",
+    "frequency": 62,
+    "type": "word",
+    "tier": 1
+  },
+  {
+    "vietnamese": "làm",
+    "english": "do, make, work",
+    "frequency": 62,
+    "type": "word",
+    "tier": 1
+  },
+  {
+    "vietnamese": "ơi",
+    "english": "hey! (vocative particle)",
+    "frequency": 61,
+    "type": "word",
+    "tier": 1
+  },
+  {
+    "vietnamese": "mình",
+    "english": "I, myself",
+    "frequency": 61,
+    "type": "word",
+    "tier": 1
+  },
+  {
+    "vietnamese": "như",
+    "english": "like, as",
+    "frequency": 60,
+    "type": "word",
+    "tier": 1
+  },
+  {
+    "vietnamese": "nhưng mà",
+    "english": "but (emphatic)",
+    "frequency": 60,
+    "type": "phrase",
+    "tier": 1
+  },
+  {
+    "vietnamese": "gì",
+    "english": "what",
+    "frequency": 59,
+    "type": "word",
+    "tier": 1
+  },
+  {
+    "vietnamese": "nhi",
+    "english": "(name/particle)",
+    "frequency": 58,
+    "type": "word",
+    "tier": 1
+  },
+  {
+    "vietnamese": "một",
+    "english": "one",
+    "frequency": 56,
+    "type": "word",
+    "tier": 1
+  },
+  {
+    "vietnamese": "nước",
+    "english": "water, country",
+    "frequency": 55,
+    "type": "word",
+    "tier": 1
+  },
+  {
+    "vietnamese": "xong",
+    "english": "done",
+    "frequency": 54,
+    "type": "word",
+    "tier": 1
+  },
+  {
+    "vietnamese": "cũng",
+    "english": "also, too",
+    "frequency": 53,
+    "type": "word",
+    "tier": 1
+  },
+  {
+    "vietnamese": "lên",
+    "english": "up, go up",
+    "frequency": 49,
+    "type": "word",
+    "tier": 1
+  },
+  {
+    "vietnamese": "quân",
+    "english": "(name)",
+    "frequency": 48,
+    "type": "word",
+    "tier": 1
+  },
+  {
+    "vietnamese": "em",
+    "english": "you (younger), sibling",
+    "frequency": 47,
+    "type": "word",
+    "tier": 1
+  },
+  {
+    "vietnamese": "bà",
+    "english": "you (elderly female), grandmother",
+    "frequency": 47,
+    "type": "word",
+    "tier": 1
+  },
+  {
+    "vietnamese": "ăn",
+    "english": "eat",
+    "frequency": 46,
+    "type": "word",
+    "tier": 1
+  },
+  {
+    "vietnamese": "cứ",
+    "english": "just go ahead, keep doing",
+    "frequency": 45,
+    "type": "word",
+    "tier": 1
+  },
+  {
+    "vietnamese": "bị",
+    "english": "to suffer, passive marker",
+    "frequency": 43,
+    "type": "word",
+    "tier": 1
+  },
+  {
+    "vietnamese": "nhá",
+    "english": "okay? (confirmation)",
+    "frequency": 43,
+    "type": "word",
+    "tier": 1
+  },
+  {
+    "vietnamese": "lại",
+    "english": "come, again",
+    "frequency": 43,
+    "type": "word",
+    "tier": 1
+  },
+  {
+    "vietnamese": "nữa",
+    "english": "more, again",
+    "frequency": 42,
+    "type": "word",
+    "tier": 1
+  },
+  {
+    "vietnamese": "còn",
+    "english": "still, remaining",
+    "frequency": 40,
+    "type": "word",
+    "tier": 2
+  },
+  {
+    "vietnamese": "chứ",
+    "english": "of course, certainly",
+    "frequency": 40,
+    "type": "word",
+    "tier": 2
+  },
+  {
+    "vietnamese": "anh",
+    "english": "you (older male), brother",
+    "frequency": 38,
+    "type": "word",
+    "tier": 2
+  },
+  {
+    "vietnamese": "cái gì",
+    "english": "what (thing)",
+    "frequency": 38,
+    "type": "word",
+    "tier": 2
+  },
+  {
+    "vietnamese": "lắm",
+    "english": "very, a lot",
+    "frequency": 37,
+    "type": "word",
+    "tier": 2
+  },
+  {
+    "vietnamese": "hai",
+    "english": "two",
+    "frequency": 36,
+    "type": "word",
+    "tier": 2
+  },
+  {
+    "vietnamese": "bây giờ",
+    "english": "now",
+    "frequency": 36,
+    "type": "word",
+    "tier": 2
+  },
+  {
+    "vietnamese": "nào",
+    "english": "let's, come on",
+    "frequency": 36,
+    "type": "word",
+    "tier": 2
+  },
+  {
+    "vietnamese": "chưa",
+    "english": "not yet",
+    "frequency": 34,
+    "type": "word",
+    "tier": 2
+  },
+  {
+    "vietnamese": "hết",
+    "english": "all gone, finished",
+    "frequency": 33,
+    "type": "word",
+    "tier": 2
+  },
+  {
+    "vietnamese": "uống",
+    "english": "drink",
+    "frequency": 33,
+    "type": "word",
+    "tier": 2
+  },
+  {
+    "vietnamese": "biết",
+    "english": "know",
+    "frequency": 31,
+    "type": "word",
+    "tier": 2
+  },
+  {
+    "vietnamese": "không không",
+    "english": "No, no.",
+    "frequency": 31,
+    "type": "phrase",
+    "tier": 2
+  },
+  {
+    "vietnamese": "ôi",
+    "english": "oh! (exclamation)",
+    "frequency": 30,
+    "type": "word",
+    "tier": 2
+  },
+  {
+    "vietnamese": "quá",
+    "english": "too much, very",
+    "frequency": 29,
+    "type": "word",
+    "tier": 2
+  },
+  {
+    "vietnamese": "đã",
+    "english": "already (past)",
+    "frequency": 28,
+    "type": "word",
+    "tier": 2
+  },
+  {
+    "vietnamese": "mua",
+    "english": "buy",
+    "frequency": 28,
+    "type": "word",
+    "tier": 2
+  },
+  {
+    "vietnamese": "quả",
+    "english": "fruit, classifier",
+    "frequency": 28,
+    "type": "word",
+    "tier": 2
+  },
+  {
+    "vietnamese": "mở",
+    "english": "open",
+    "frequency": 28,
+    "type": "word",
+    "tier": 2
+  },
+  {
+    "vietnamese": "thằng",
+    "english": "guy, dude (informal)",
+    "frequency": 28,
+    "type": "word",
+    "tier": 2
+  },
+  {
+    "vietnamese": "không phải",
+    "english": "not, isn't",
+    "frequency": 28,
+    "type": "phrase",
+    "tier": 2
+  },
+  {
+    "vietnamese": "cả",
+    "english": "all, even",
+    "frequency": 27,
+    "type": "word",
+    "tier": 2
+  },
+  {
+    "vietnamese": "người",
+    "english": "person, people",
+    "frequency": 27,
+    "type": "word",
+    "tier": 2
+  },
+  {
+    "vietnamese": "thấy",
+    "english": "see, notice",
+    "frequency": 27,
+    "type": "word",
+    "tier": 2
+  },
+  {
+    "vietnamese": "sẽ",
+    "english": "future tense marker",
+    "frequency": 27,
+    "type": "word",
+    "tier": 2
+  },
+  {
+    "vietnamese": "nóng",
+    "english": "hot",
+    "frequency": 27,
+    "type": "word",
+    "tier": 2
+  },
+  {
+    "vietnamese": "mới",
+    "english": "just (recently)",
+    "frequency": 26,
+    "type": "word",
+    "tier": 2
+  },
+  {
+    "vietnamese": "với",
+    "english": "with",
+    "frequency": 26,
+    "type": "word",
+    "tier": 2
+  },
+  {
+    "vietnamese": "về",
+    "english": "return home",
+    "frequency": 26,
+    "type": "word",
+    "tier": 2
+  },
+  {
+    "vietnamese": "hay",
+    "english": "often, or",
+    "frequency": 25,
+    "type": "word",
+    "tier": 2
+  },
+  {
+    "vietnamese": "cần",
+    "english": "need",
+    "frequency": 25,
+    "type": "word",
+    "tier": 2
+  },
+  {
+    "vietnamese": "kia",
+    "english": "over there",
+    "frequency": 24,
+    "type": "word",
+    "tier": 2
+  },
+  {
+    "vietnamese": "sao",
+    "english": "star",
+    "frequency": 24,
+    "type": "word",
+    "tier": 2
+  },
+  {
+    "vietnamese": "trong",
+    "english": "inside, in",
+    "frequency": 24,
+    "type": "word",
+    "tier": 2
+  },
+  {
+    "vietnamese": "mày",
+    "english": "you (very informal)",
+    "frequency": 24,
+    "type": "word",
+    "tier": 2
+  },
+  {
+    "vietnamese": "hộp",
+    "english": "box, container",
+    "frequency": 24,
+    "type": "word",
+    "tier": 2
+  },
+  {
+    "vietnamese": "xong rồi",
+    "english": "already done, finished",
+    "frequency": 24,
+    "type": "phrase",
+    "tier": 2
+  },
+  {
+    "vietnamese": "cây",
+    "english": "tree, plant",
+    "frequency": 23,
+    "type": "word",
+    "tier": 2
+  },
+  {
+    "vietnamese": "đun",
+    "english": "to boil, heat up",
+    "frequency": 23,
+    "type": "word",
+    "tier": 2
+  },
+  {
+    "vietnamese": "this one",
+    "english": "This one.",
+    "frequency": 23,
+    "type": "phrase",
+    "tier": 2
+  },
+  {
+    "vietnamese": "mẹ ơi",
+    "english": "hey mom!",
+    "frequency": 23,
+    "type": "phrase",
+    "tier": 2
+  },
+  {
+    "vietnamese": "chỉ",
+    "english": "only, just",
+    "frequency": 22,
+    "type": "word",
+    "tier": 2
+  },
+  {
+    "vietnamese": "bảo",
+    "english": "to tell, to say",
+    "frequency": 22,
+    "type": "word",
+    "tier": 2
+  },
+  {
+    "vietnamese": "đúng",
+    "english": "correct",
+    "frequency": 22,
+    "type": "word",
+    "tier": 2
+  },
+  {
+    "vietnamese": "dùng",
+    "english": "use",
+    "frequency": 22,
+    "type": "word",
+    "tier": 2
+  },
+  {
+    "vietnamese": "một cái",
+    "english": "one (thing)",
+    "frequency": 22,
+    "type": "phrase",
+    "tier": 2
+  },
+  {
+    "vietnamese": "nhiều",
+    "english": "many, much",
+    "frequency": 21,
+    "type": "word",
+    "tier": 2
+  },
+  {
+    "vietnamese": "nó nó",
+    "english": "It, it.",
+    "frequency": 21,
+    "type": "phrase",
+    "tier": 2
+  },
+  {
+    "vietnamese": "nhà",
+    "english": "house, home",
+    "frequency": 20,
+    "type": "word",
+    "tier": 2
+  },
+  {
+    "vietnamese": "ngon",
+    "english": "delicious, tasty",
+    "frequency": 20,
+    "type": "word",
+    "tier": 2
+  },
+  {
+    "vietnamese": "cắt",
+    "english": "cut",
+    "frequency": 20,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "mang",
+    "english": "carry, wear, bring",
+    "frequency": 20,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "này này",
+    "english": "Here, here.",
+    "frequency": 20,
+    "type": "phrase",
+    "tier": 3
+  },
+  {
+    "vietnamese": "thế này",
+    "english": "like this",
+    "frequency": 20,
+    "type": "phrase",
+    "tier": 3
+  },
+  {
+    "vietnamese": "nên",
+    "english": "should, therefore",
+    "frequency": 19,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "rất",
+    "english": "very",
+    "frequency": 19,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "đang",
+    "english": "present tense marker",
+    "frequency": 18,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "ngày",
+    "english": "day",
+    "frequency": 18,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "đẹp",
+    "english": "beautiful, pretty",
+    "frequency": 18,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "mấy",
+    "english": "how many (small number)",
+    "frequency": 18,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "cắm",
+    "english": "to plug in",
+    "frequency": 18,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "nồi",
+    "english": "pot, cooking pot",
+    "frequency": 18,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "của con",
+    "english": "belongs to child / yours",
+    "frequency": 18,
+    "type": "phrase",
+    "tier": 3
+  },
+  {
+    "vietnamese": "bên",
+    "english": "beside",
+    "frequency": 17,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "ạ",
+    "english": "polite particle",
+    "frequency": 17,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "đưa",
+    "english": "hand over, give",
+    "frequency": 17,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "chị",
+    "english": "you (older female), sister",
+    "frequency": 17,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "dâu",
+    "english": "strawberry",
+    "frequency": 17,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "ngồi",
+    "english": "sit",
+    "frequency": 17,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "nghỉ",
+    "english": "rest, break, off",
+    "frequency": 17,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "đúng rồi",
+    "english": "that's right",
+    "frequency": 17,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "trà",
+    "english": "tea",
+    "frequency": 17,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "ấm",
+    "english": "warm",
+    "frequency": 17,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "đây đây",
+    "english": "Here, here.",
+    "frequency": 17,
+    "type": "phrase",
+    "tier": 3
+  },
+  {
+    "vietnamese": "chỗ",
+    "english": "place, spot",
+    "frequency": 16,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "luôn",
+    "english": "always",
+    "frequency": 16,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "mất",
+    "english": "to lose, gone",
+    "frequency": 16,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "nhìn",
+    "english": "look at",
+    "frequency": 16,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "bằng",
+    "english": "equal to",
+    "frequency": 16,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "vứt",
+    "english": "to throw away",
+    "frequency": 16,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "các",
+    "english": "plural marker",
+    "frequency": 16,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "đỏ",
+    "english": "red",
+    "frequency": 16,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "chân",
+    "english": "leg, foot",
+    "frequency": 16,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "này cái",
+    "english": "Hey, the.",
+    "frequency": 16,
+    "type": "phrase",
+    "tier": 3
+  },
+  {
+    "vietnamese": "vâng",
+    "english": "yes (polite)",
+    "frequency": 15,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "hơn",
+    "english": "more (comparative)",
+    "frequency": 15,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "lấy",
+    "english": "take, get",
+    "frequency": 15,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "lúc",
+    "english": "moment, time",
+    "frequency": 15,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "dưới",
+    "english": "under, below",
+    "frequency": 15,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "thích",
+    "english": "like",
+    "frequency": 15,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "kiểu",
+    "english": "style, type, like",
+    "frequency": 15,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "màu",
+    "english": "color",
+    "frequency": 15,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "mặc",
+    "english": "to wear (clothes)",
+    "frequency": 15,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "đây này",
+    "english": "Here.",
+    "frequency": 15,
+    "type": "phrase",
+    "tier": 3
+  },
+  {
+    "vietnamese": "từ",
+    "english": "word",
+    "frequency": 14,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "nhỏ",
+    "english": "small, little",
+    "frequency": 14,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "xem",
+    "english": "watch, see",
+    "frequency": 14,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "nói",
+    "english": "speak, say",
+    "frequency": 14,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "vẫn",
+    "english": "still",
+    "frequency": 14,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "muốn",
+    "english": "want",
+    "frequency": 14,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "màn",
+    "english": "curtain, screen",
+    "frequency": 14,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "đen",
+    "english": "black",
+    "frequency": 14,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "đến",
+    "english": "to, until",
+    "frequency": 13,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "hoa",
+    "english": "flower",
+    "frequency": 13,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "yêu",
+    "english": "love",
+    "frequency": 13,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "trên",
+    "english": "on, above",
+    "frequency": 13,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "tức",
+    "english": "angry, annoyed",
+    "frequency": 13,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "bóc",
+    "english": "to peel, unwrap",
+    "frequency": 13,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "vì",
+    "english": "because",
+    "frequency": 13,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "bởi vì",
+    "english": "because",
+    "frequency": 13,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "chín",
+    "english": "nine",
+    "frequency": 13,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "sôi",
+    "english": "boiling",
+    "frequency": 13,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "xuống",
+    "english": "down, go down",
+    "frequency": 13,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "lạnh",
+    "english": "cold",
+    "frequency": 13,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "áo",
+    "english": "shirt, top",
+    "frequency": 13,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "không biết",
+    "english": "I don't know.",
+    "frequency": 13,
+    "type": "phrase",
+    "tier": 3
+  },
+  {
+    "vietnamese": "tại",
+    "english": "at, because of",
+    "frequency": 12,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "hơi",
+    "english": "slightly, a bit",
+    "frequency": 12,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "ngoài",
+    "english": "outside, out",
+    "frequency": 12,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "cơ",
+    "english": "(emphasis particle)",
+    "frequency": 12,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "cháu",
+    "english": "grandchild, niece, nephew",
+    "frequency": 12,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "hả",
+    "english": "huh? (question particle)",
+    "frequency": 12,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "chậu",
+    "english": "basin, pot (plant)",
+    "frequency": 12,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "ông",
+    "english": "you (elderly male), grandfather",
+    "frequency": 12,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "bỏ",
+    "english": "abandon, put in",
+    "frequency": 12,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "xanh",
+    "english": "blue, green",
+    "frequency": 12,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "tao",
+    "english": "I (informal)",
+    "frequency": 12,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "quần",
+    "english": "pants",
+    "frequency": 12,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "đúng không",
+    "english": "Right?",
+    "frequency": 12,
+    "type": "phrase",
+    "tier": 3
+  },
+  {
+    "vietnamese": "thôi thôi",
+    "english": "stop stop, enough",
+    "frequency": 12,
+    "type": "phrase",
+    "tier": 3
+  },
+  {
+    "vietnamese": "nhỉ",
+    "english": "right? (particle)",
+    "frequency": 11,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "tí",
+    "english": "a little bit",
+    "frequency": 11,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "ở đây",
+    "english": "here",
+    "frequency": 11,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "ngủ",
+    "english": "sleep",
+    "frequency": 11,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "thêm",
+    "english": "more, add",
+    "frequency": 11,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "cô",
+    "english": "you (aunt), miss",
+    "frequency": 11,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "giấy",
+    "english": "paper",
+    "frequency": 11,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "dính",
+    "english": "sticky, to stick",
+    "frequency": 11,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "tự",
+    "english": "self, by oneself",
+    "frequency": 11,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "trắng",
+    "english": "white",
+    "frequency": 11,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "từ từ",
+    "english": "slowly, take it easy",
+    "frequency": 10,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "năm",
+    "english": "year",
+    "frequency": 10,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "giờ",
+    "english": "hour, time",
+    "frequency": 10,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "bật",
+    "english": "turn on",
+    "frequency": 10,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "đóng",
+    "english": "close, shut",
+    "frequency": 10,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "trông",
+    "english": "to look, to watch",
+    "frequency": 10,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "tên",
+    "english": "name",
+    "frequency": 10,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "sợ",
+    "english": "scared, afraid",
+    "frequency": 10,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "thơm",
+    "english": "fragrant, delicious",
+    "frequency": 10,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "say",
+    "english": "drunk",
+    "frequency": 10,
+    "type": "word",
+    "tier": 3
+  },
+  {
+    "vietnamese": "cháy",
+    "english": "burnt, on fire",
+    "frequency": 10,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "ngày mai",
+    "english": "tomorrow",
+    "frequency": 10,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "thử",
+    "english": "try on, test",
+    "frequency": 10,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "thuốc",
+    "english": "medicine",
+    "frequency": 10,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "lá",
+    "english": "leaf",
+    "frequency": 10,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "dẫm",
+    "english": "to step on",
+    "frequency": 10,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "đầu",
+    "english": "head",
+    "frequency": 9,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "sáng",
+    "english": "morning",
+    "frequency": 9,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "hôm nay",
+    "english": "today",
+    "frequency": 9,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "đừng",
+    "english": "don't (imperative)",
+    "frequency": 9,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "sau",
+    "english": "behind",
+    "frequency": 9,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "hỏi",
+    "english": "ask",
+    "frequency": 9,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "hồng",
+    "english": "pink",
+    "frequency": 9,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "khô",
+    "english": "dry",
+    "frequency": 9,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "tắm",
+    "english": "to bathe, shower",
+    "frequency": 9,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "làm gì",
+    "english": "What for?",
+    "frequency": 9,
+    "type": "phrase",
+    "tier": 4
+  },
+  {
+    "vietnamese": "nghỉ đi",
+    "english": "Rest.",
+    "frequency": 9,
+    "type": "phrase",
+    "tier": 4
+  },
+  {
+    "vietnamese": "không được",
+    "english": "No way.",
+    "frequency": 9,
+    "type": "phrase",
+    "tier": 4
+  },
+  {
+    "vietnamese": "nếu",
+    "english": "if",
+    "frequency": 8,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "quay",
+    "english": "turn, rotate",
+    "frequency": 8,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "được rồi",
+    "english": "okay, alright",
+    "frequency": 8,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "trước",
+    "english": "in front of",
+    "frequency": 8,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "chiều",
+    "english": "afternoon",
+    "frequency": 8,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "ba",
+    "english": "three",
+    "frequency": 8,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "bốn",
+    "english": "four",
+    "frequency": 8,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "tắt",
+    "english": "turn off",
+    "frequency": 8,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "vỏ",
+    "english": "shell, peel, case",
+    "frequency": 8,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "gọi",
+    "english": "call",
+    "frequency": 8,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "bao giờ",
+    "english": "when (future)",
+    "frequency": 8,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "quên",
+    "english": "forget",
+    "frequency": 8,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "bàn",
+    "english": "table, desk",
+    "frequency": 8,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "máy",
+    "english": "machine",
+    "frequency": 8,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "gạch",
+    "english": "brick, tile",
+    "frequency": 8,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "số",
+    "english": "number",
+    "frequency": 8,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "mắt",
+    "english": "eye",
+    "frequency": 8,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "dán",
+    "english": "to glue, paste",
+    "frequency": 8,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "như thế này",
+    "english": "like this, this way",
+    "frequency": 8,
+    "type": "phrase",
+    "tier": 4
+  },
+  {
+    "vietnamese": "làm cái này",
+    "english": "Do this.",
+    "frequency": 8,
+    "type": "phrase",
+    "tier": 4
+  },
+  {
+    "vietnamese": "cho nên là",
+    "english": "so, therefore",
+    "frequency": 8,
+    "type": "phrase",
+    "tier": 4
+  },
+  {
+    "vietnamese": "bác",
+    "english": "uncle, aunt (older than parent)",
+    "frequency": 7,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "đủ",
+    "english": "enough",
+    "frequency": 7,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "cổng",
+    "english": "gate, entrance",
+    "frequency": 7,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "cửa",
+    "english": "door, gate",
+    "frequency": 7,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "điện",
+    "english": "electricity, electric",
+    "frequency": 7,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "tốt",
+    "english": "good",
+    "frequency": 7,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "tiền",
+    "english": "money",
+    "frequency": 7,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "nằm",
+    "english": "lie down",
+    "frequency": 7,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "hiểu",
+    "english": "understand",
+    "frequency": 7,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "cái kia",
+    "english": "that one over there",
+    "frequency": 7,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "chúng ta",
+    "english": "we (inclusive)",
+    "frequency": 7,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "nghĩ",
+    "english": "think",
+    "frequency": 7,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "quạt",
+    "english": "fan",
+    "frequency": 7,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "vị",
+    "english": "taste, flavor",
+    "frequency": 7,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "và",
+    "english": "and",
+    "frequency": 7,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "đổ",
+    "english": "pour, spill",
+    "frequency": 7,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "túi",
+    "english": "bag",
+    "frequency": 7,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "cái chỗ này",
+    "english": "this spot right here",
+    "frequency": 7,
+    "type": "phrase",
+    "tier": 4
+  },
+  {
+    "vietnamese": "này này này",
+    "english": "Hey, hey, hey.",
+    "frequency": 7,
+    "type": "phrase",
+    "tier": 4
+  },
+  {
+    "vietnamese": "đánh",
+    "english": "hit, fight",
+    "frequency": 6,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "chắc",
+    "english": "sure, certain",
+    "frequency": 6,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "ai",
+    "english": "who",
+    "frequency": 6,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "chồng",
+    "english": "husband",
+    "frequency": 6,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "nhớ",
+    "english": "remember, miss",
+    "frequency": 6,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "vừa",
+    "english": "fit, just right",
+    "frequency": 6,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "cùng",
+    "english": "together, same",
+    "frequency": 6,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "chơi",
+    "english": "play",
+    "frequency": 6,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "mềm",
+    "english": "soft",
+    "frequency": 6,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "thế nào",
+    "english": "how",
+    "frequency": 6,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "rác",
+    "english": "trash, garbage",
+    "frequency": 6,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "lọc",
+    "english": "to filter",
+    "frequency": 6,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "hạt",
+    "english": "seed",
+    "frequency": 6,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "không sao",
+    "english": "it's okay, no problem",
+    "frequency": 6,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "xinh",
+    "english": "pretty, cute",
+    "frequency": 6,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "nải",
+    "english": "bunch (of bananas)",
+    "frequency": 6,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "chuối",
+    "english": "banana",
+    "frequency": 6,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "phật",
+    "english": "Buddha",
+    "frequency": 6,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "vàng",
+    "english": "yellow, gold",
+    "frequency": 6,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "ngọt",
+    "english": "sweet",
+    "frequency": 6,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "gió",
+    "english": "wind",
+    "frequency": 6,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "tóc",
+    "english": "hair",
+    "frequency": 6,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "ruột",
+    "english": "intestine, inner",
+    "frequency": 6,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "điện thoại",
+    "english": "phone",
+    "frequency": 6,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "thì nó lại",
+    "english": "Then it's again.",
+    "frequency": 6,
+    "type": "phrase",
+    "tier": 4
+  },
+  {
+    "vietnamese": "trời",
+    "english": "sky, heaven, weather",
+    "frequency": 5,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "cao",
+    "english": "tall, high",
+    "frequency": 5,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "vậy",
+    "english": "so, thus, like that",
+    "frequency": 5,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "bé",
+    "english": "small, tiny",
+    "frequency": 5,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "giống",
+    "english": "similar, same",
+    "frequency": 5,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "khác",
+    "english": "different, other",
+    "frequency": 5,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "sắp",
+    "english": "about to, soon",
+    "frequency": 5,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "rửa",
+    "english": "wash",
+    "frequency": 5,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "cứng",
+    "english": "hard, stiff",
+    "frequency": 5,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "quà",
+    "english": "gift, present",
+    "frequency": 5,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "muối",
+    "english": "salt",
+    "frequency": 5,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "giữ",
+    "english": "keep, hold",
+    "frequency": 5,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "lồng",
+    "english": "cage, to insert",
+    "frequency": 5,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "mặt",
+    "english": "face",
+    "frequency": 5,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "chăn",
+    "english": "blanket",
+    "frequency": 5,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "ngâm",
+    "english": "to soak",
+    "frequency": 5,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "da",
+    "english": "skin",
+    "frequency": 5,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "dép",
+    "english": "sandals, slippers",
+    "frequency": 5,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "xịt",
+    "english": "to spray",
+    "frequency": 5,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "khăn",
+    "english": "towel, napkin",
+    "frequency": 5,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "this one is",
+    "english": "This one is.",
+    "frequency": 5,
+    "type": "phrase",
+    "tier": 4
+  },
+  {
+    "vietnamese": "cho nước vào",
+    "english": "Add water.",
+    "frequency": 5,
+    "type": "phrase",
+    "tier": 4
+  },
+  {
+    "vietnamese": "uống ăn xong",
+    "english": "Drink after eating.",
+    "frequency": 5,
+    "type": "phrase",
+    "tier": 4
+  },
+  {
+    "vietnamese": "nghe",
+    "english": "listen, hear",
+    "frequency": 4,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "quê",
+    "english": "hometown",
+    "frequency": 4,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "cổ",
+    "english": "neck",
+    "frequency": 4,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "sửa",
+    "english": "fix, repair",
+    "frequency": 4,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "hôm qua",
+    "english": "yesterday",
+    "frequency": 4,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "mệt mỏi",
+    "english": "exhausted",
+    "frequency": 4,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "kéo",
+    "english": "pull",
+    "frequency": 4,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "đặt",
+    "english": "place, order, book",
+    "frequency": 4,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "bạn",
+    "english": "you, friend",
+    "frequency": 4,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "qua",
+    "english": "past, across, over",
+    "frequency": 4,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "tại sao",
+    "english": "why",
+    "frequency": 4,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "vợ",
+    "english": "wife",
+    "frequency": 4,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "nhanh",
+    "english": "fast, quick",
+    "frequency": 4,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "chết",
+    "english": "die, dead",
+    "frequency": 4,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "cà phê",
+    "english": "coffee",
+    "frequency": 4,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "kính",
+    "english": "glasses",
+    "frequency": 4,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "nói chung",
+    "english": "in general",
+    "frequency": 4,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "rau",
+    "english": "vegetable",
+    "frequency": 4,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "tàu",
+    "english": "ship, train",
+    "frequency": 4,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "cam",
+    "english": "orange (color/fruit)",
+    "frequency": 4,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "mỗi",
+    "english": "each, every",
+    "frequency": 4,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "bình thường",
+    "english": "normal, ordinary",
+    "frequency": 4,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "thường",
+    "english": "usually",
+    "frequency": 4,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "đọc",
+    "english": "read",
+    "frequency": 4,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "không thể",
+    "english": "impossible, cannot",
+    "frequency": 4,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "con gái",
+    "english": "daughter, girl",
+    "frequency": 4,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "cẩn thận",
+    "english": "careful",
+    "frequency": 4,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "dài",
+    "english": "long",
+    "frequency": 4,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "bẩn",
+    "english": "dirty",
+    "frequency": 4,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "bụng",
+    "english": "stomach, belly",
+    "frequency": 4,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "xe",
+    "english": "vehicle",
+    "frequency": 3,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "nặng",
+    "english": "heavy",
+    "frequency": 3,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "lớn hơn",
+    "english": "bigger",
+    "frequency": 3,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "đó",
+    "english": "there",
+    "frequency": 3,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "gần",
+    "english": "near",
+    "frequency": 3,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "bao",
+    "english": "how much/many",
+    "frequency": 3,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "làng",
+    "english": "village",
+    "frequency": 3,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "đất",
+    "english": "soil, land",
+    "frequency": 3,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "luộc",
+    "english": "boil",
+    "frequency": 3,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "theo",
+    "english": "follow, according to",
+    "frequency": 3,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "công ty",
+    "english": "company",
+    "frequency": 3,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "ví dụ",
+    "english": "for example",
+    "frequency": 3,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "như thế nào",
+    "english": "how, in what way",
+    "frequency": 3,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "giả",
+    "english": "fake, false",
+    "frequency": 3,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "chú",
+    "english": "you (uncle)",
+    "frequency": 3,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "phở",
+    "english": "pho noodle soup",
+    "frequency": 3,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "nướng",
+    "english": "grill, bake",
+    "frequency": 3,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "lâu",
+    "english": "long time",
+    "frequency": 3,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "ướt",
+    "english": "wet",
+    "frequency": 3,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "dễ",
+    "english": "easy",
+    "frequency": 3,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "đường",
+    "english": "sugar",
+    "frequency": 3,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "sầu riêng",
+    "english": "durian",
+    "frequency": 3,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "tôi",
+    "english": "I, me",
+    "frequency": 3,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "nhanh lên",
+    "english": "hurry up",
+    "frequency": 3,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "vội",
+    "english": "in a hurry",
+    "frequency": 3,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "lúc nào",
+    "english": "when, anytime",
+    "frequency": 3,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "chẳng",
+    "english": "not at all",
+    "frequency": 3,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "cơm",
+    "english": "rice (cooked)",
+    "frequency": 3,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "nhiều quá",
+    "english": "too much",
+    "frequency": 3,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "tay",
+    "english": "hand, arm",
+    "frequency": 3,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "thìa",
+    "english": "spoon",
+    "frequency": 3,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "thật",
+    "english": "real, true",
+    "frequency": 3,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "bạc",
+    "english": "silver",
+    "frequency": 3,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "chương trình",
+    "english": "program, show",
+    "frequency": 3,
+    "type": "word",
+    "tier": 4
+  },
+  {
+    "vietnamese": "chùa",
+    "english": "temple, pagoda",
+    "frequency": 3,
+    "type": "word",
+    "tier": 4
+  }
+]

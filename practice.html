@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Viet Practice</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+  :root {
+    --bg: #0f0f0f;
+    --surface: #1a1a1a;
+    --surface2: #242424;
+    --border: #333;
+    --text: #e0e0e0;
+    --dim: #666;
+    --accent: #4fc3f7;
+    --green: #81c784;
+    --yellow: #ffeb3b;
+    --orange: #ffb74d;
+    --red: #ef5350;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  /* Header */
+  .header {
+    padding: 16px 20px 12px;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+
+  .header h1 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--accent);
+  }
+
+  .header h1 span { color: var(--yellow); }
+
+  .streak {
+    font-size: 13px;
+    color: var(--dim);
+  }
+
+  .streak strong { color: var(--orange); }
+
+  /* Progress bar */
+  .progress-bar {
+    height: 6px;
+    background: var(--surface2);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--green), var(--accent));
+    border-radius: 3px;
+    transition: width 0.4s ease;
+  }
+
+  .progress-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: var(--dim);
+    margin-top: 4px;
+  }
+
+  /* Tier selector */
+  .tiers {
+    display: flex;
+    gap: 8px;
+    padding: 12px 20px;
+    background: var(--surface);
+    overflow-x: auto;
+  }
+
+  .tier-btn {
+    padding: 8px 16px;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    background: transparent;
+    color: var(--dim);
+    font-size: 13px;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .tier-btn.active {
+    background: var(--accent);
+    color: #000;
+    border-color: var(--accent);
+    font-weight: 600;
+  }
+
+  .tier-btn .count {
+    font-size: 11px;
+    opacity: 0.7;
+  }
+
+  /* Card area */
+  .card-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    gap: 24px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 400px;
+    min-height: 280px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 24px;
+    cursor: pointer;
+    transition: all 0.2s;
+    user-select: none;
+    position: relative;
+  }
+
+  .card:active {
+    transform: scale(0.98);
+  }
+
+  .card-badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 12px;
+    background: var(--surface2);
+    color: var(--dim);
+  }
+
+  .card-position {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    font-size: 11px;
+    color: var(--dim);
+  }
+
+  .card-viet {
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--yellow);
+    text-align: center;
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+
+  .card-english {
+    font-size: 20px;
+    color: var(--dim);
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    min-height: 30px;
+  }
+
+  .card-english.visible {
+    opacity: 1;
+    color: var(--text);
+  }
+
+  .card-freq {
+    position: absolute;
+    bottom: 16px;
+    font-size: 11px;
+    color: var(--dim);
+  }
+
+  .card-practiced {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    font-size: 11px;
+    color: var(--green);
+  }
+
+  .tap-hint {
+    font-size: 12px;
+    color: var(--dim);
+    text-align: center;
+  }
+
+  /* Controls */
+  .controls {
+    display: flex;
+    gap: 12px;
+    padding: 16px 20px 24px;
+    justify-content: center;
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+  }
+
+  .ctrl-btn {
+    padding: 14px 28px;
+    border: none;
+    border-radius: 14px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .ctrl-btn:active { transform: scale(0.95); }
+
+  .btn-skip {
+    background: var(--surface2);
+    color: var(--dim);
+    border: 1px solid var(--border);
+  }
+
+  .btn-speak {
+    background: var(--accent);
+    color: #000;
+    flex: 1;
+    max-width: 200px;
+  }
+
+  .btn-speak.listening {
+    background: var(--red);
+    color: white;
+    animation: pulse 1.5s infinite;
+  }
+
+  .btn-next {
+    background: var(--green);
+    color: #000;
+    flex: 1;
+    max-width: 200px;
+  }
+
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(239, 83, 80, 0.3); }
+    50% { box-shadow: 0 0 0 10px rgba(239, 83, 80, 0); }
+  }
+
+  /* Session complete */
+  .complete {
+    text-align: center;
+  }
+
+  .complete h2 {
+    font-size: 28px;
+    color: var(--green);
+    margin-bottom: 8px;
+  }
+
+  .complete p {
+    font-size: 16px;
+    color: var(--dim);
+    margin-bottom: 24px;
+  }
+
+  .complete .stats {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    margin-bottom: 32px;
+  }
+
+  .complete .stat {
+    text-align: center;
+  }
+
+  .complete .stat-num {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--accent);
+  }
+
+  .complete .stat-label {
+    font-size: 12px;
+    color: var(--dim);
+  }
+
+  /* Mode toggle */
+  .mode-row {
+    display: flex;
+    gap: 8px;
+    padding: 0 20px 8px;
+    background: var(--surface);
+  }
+
+  .mode-btn {
+    padding: 6px 14px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: transparent;
+    color: var(--dim);
+    font-size: 12px;
+    cursor: pointer;
+  }
+
+  .mode-btn.active {
+    background: var(--surface2);
+    color: var(--text);
+    border-color: var(--accent);
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-top">
+    <h1><span>Viet</span> Practice</h1>
+    <div class="streak">Today: <strong id="todayCount">0</strong> words</div>
+  </div>
+  <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+  <div class="progress-label">
+    <span id="progressText">0 / 0 practiced</span>
+    <span id="progressPct">0%</span>
+  </div>
+</div>
+
+<div class="tiers" id="tiers"></div>
+
+<div class="mode-row">
+  <button class="mode-btn active" data-mode="new" onclick="setMode('new')">New words</button>
+  <button class="mode-btn" data-mode="review" onclick="setMode('review')">Review</button>
+  <button class="mode-btn" data-mode="all" onclick="setMode('all')">All</button>
+</div>
+
+<div class="card-area" id="cardArea">
+  <div class="card" id="card" onclick="revealMeaning()">
+    <div class="card-position" id="cardPos"></div>
+    <div class="card-badge" id="cardBadge"></div>
+    <div class="card-viet" id="cardViet"></div>
+    <div class="card-english" id="cardEnglish"></div>
+    <div class="card-freq" id="cardFreq"></div>
+    <div class="card-practiced" id="cardPracticed"></div>
+  </div>
+  <div class="tap-hint" id="tapHint">Tap card to reveal meaning</div>
+</div>
+
+<div class="controls">
+  <button class="ctrl-btn btn-skip" onclick="skipCard()">Skip</button>
+  <button class="ctrl-btn btn-speak" id="speakBtn" onclick="hearPronunciation()">Hear it</button>
+  <button class="ctrl-btn btn-next" onclick="markAndNext()">Got it</button>
+</div>
+
+<script>
+let lessons = [];
+let progress = {}; // { vietnamese: { practiced: N, lastDate: "YYYY-MM-DD" } }
+let currentTier = 1;
+let currentMode = 'new'; // new, review, all
+let currentQueue = [];
+let currentIdx = 0;
+let revealed = false;
+let todayPracticed = 0;
+
+const today = new Date().toISOString().split('T')[0];
+
+// Load
+async function init() {
+  const res = await fetch('/lessons.json');
+  lessons = await res.json();
+
+  // Load progress from localStorage
+  const saved = localStorage.getItem('viet-practice-progress');
+  if (saved) progress = JSON.parse(saved);
+
+  // Count today's practice
+  todayPracticed = Object.values(progress).filter(p => p.lastDate === today).length;
+  document.getElementById('todayCount').textContent = todayPracticed;
+
+  renderTiers();
+  buildQueue();
+  showCard();
+}
+
+function saveProgress() {
+  localStorage.setItem('viet-practice-progress', JSON.stringify(progress));
+}
+
+function renderTiers() {
+  const container = document.getElementById('tiers');
+  const tiers = [
+    { id: 1, label: 'Core 50', desc: 'Most common' },
+    { id: 2, label: 'Next 50', desc: 'High frequency' },
+    { id: 3, label: 'Top 200', desc: 'Conversational' },
+    { id: 4, label: 'Extended', desc: 'Full vocabulary' },
+  ];
+
+  container.innerHTML = tiers.map(t => {
+    const items = lessons.filter(l => l.tier === t.id);
+    const practiced = items.filter(l => progress[l.vietnamese]?.practiced > 0).length;
+    return `<button class="tier-btn ${t.id === currentTier ? 'active' : ''}"
+      onclick="selectTier(${t.id})">
+      ${t.label} <span class="count">${practiced}/${items.length}</span>
+    </button>`;
+  }).join('');
+}
+
+function selectTier(tier) {
+  currentTier = tier;
+  renderTiers();
+  buildQueue();
+  showCard();
+}
+
+function setMode(mode) {
+  currentMode = mode;
+  document.querySelectorAll('.mode-btn').forEach(b => {
+    b.classList.toggle('active', b.dataset.mode === mode);
+  });
+  buildQueue();
+  showCard();
+}
+
+function buildQueue() {
+  let pool = lessons.filter(l => l.tier === currentTier);
+
+  if (currentMode === 'new') {
+    pool = pool.filter(l => !progress[l.vietnamese] || progress[l.vietnamese].practiced === 0);
+  } else if (currentMode === 'review') {
+    pool = pool.filter(l => progress[l.vietnamese]?.practiced > 0);
+  }
+
+  currentQueue = pool;
+  currentIdx = 0;
+  updateProgress();
+}
+
+function updateProgress() {
+  const tierItems = lessons.filter(l => l.tier === currentTier);
+  const practiced = tierItems.filter(l => progress[l.vietnamese]?.practiced > 0).length;
+  const total = tierItems.length;
+  const pct = total > 0 ? Math.round(practiced / total * 100) : 0;
+
+  document.getElementById('progressFill').style.width = pct + '%';
+  document.getElementById('progressText').textContent = `${practiced} / ${total} practiced`;
+  document.getElementById('progressPct').textContent = pct + '%';
+}
+
+function showCard() {
+  revealed = false;
+  const english = document.getElementById('cardEnglish');
+  english.classList.remove('visible');
+  document.getElementById('tapHint').textContent = 'Tap card to reveal meaning';
+
+  if (currentIdx >= currentQueue.length) {
+    showComplete();
+    return;
+  }
+
+  const item = currentQueue[currentIdx];
+  document.getElementById('cardViet').textContent = item.vietnamese;
+  english.textContent = item.english;
+  document.getElementById('cardBadge').textContent = item.type === 'phrase' ? 'phrase' : '';
+  document.getElementById('cardPos').textContent = `${currentIdx + 1} / ${currentQueue.length}`;
+  document.getElementById('cardFreq').textContent = `heard ${item.frequency}x in recordings`;
+
+  const p = progress[item.vietnamese];
+  document.getElementById('cardPracticed').textContent =
+    p?.practiced > 0 ? `practiced ${p.practiced}x` : '';
+}
+
+function revealMeaning() {
+  if (revealed) return;
+  revealed = true;
+  document.getElementById('cardEnglish').classList.add('visible');
+  document.getElementById('tapHint').textContent = 'Say it out loud, then tap "Got it"';
+}
+
+function hearPronunciation() {
+  if (currentIdx >= currentQueue.length) return;
+  const item = currentQueue[currentIdx];
+
+  // Use Web Speech API to speak Vietnamese
+  const utterance = new SpeechSynthesisUtterance(item.vietnamese);
+  utterance.lang = 'vi-VN';
+  utterance.rate = 0.8;
+  speechSynthesis.speak(utterance);
+
+  // Also reveal meaning
+  if (!revealed) revealMeaning();
+}
+
+function markAndNext() {
+  if (currentIdx >= currentQueue.length) return;
+
+  const item = currentQueue[currentIdx];
+  if (!progress[item.vietnamese]) {
+    progress[item.vietnamese] = { practiced: 0, lastDate: '' };
+  }
+  progress[item.vietnamese].practiced++;
+  progress[item.vietnamese].lastDate = today;
+  saveProgress();
+
+  // Update today count
+  todayPracticed = Object.values(progress).filter(p => p.lastDate === today).length;
+  document.getElementById('todayCount').textContent = todayPracticed;
+
+  currentIdx++;
+  renderTiers();
+  updateProgress();
+  showCard();
+}
+
+function skipCard() {
+  currentIdx++;
+  showCard();
+}
+
+function showComplete() {
+  const tierItems = lessons.filter(l => l.tier === currentTier);
+  const practiced = tierItems.filter(l => progress[l.vietnamese]?.practiced > 0).length;
+
+  document.getElementById('cardArea').innerHTML = `
+    <div class="complete">
+      <h2>${currentMode === 'new' ? 'No new words!' : 'Session done!'}</h2>
+      <p>${currentMode === 'new'
+        ? 'All words in this tier have been practiced. Try Review mode or the next tier.'
+        : `You've reviewed all ${currentQueue.length} words in this session.`}</p>
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-num">${practiced}</div>
+          <div class="stat-label">words learned</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">${tierItems.length - practiced}</div>
+          <div class="stat-label">remaining</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">${todayPracticed}</div>
+          <div class="stat-label">today</div>
+        </div>
+      </div>
+      <button class="ctrl-btn btn-next" onclick="resetSession()" style="margin:0 auto">
+        ${currentMode === 'new' ? 'Switch to Review' : 'Practice Again'}
+      </button>
+    </div>
+  `;
+}
+
+function resetSession() {
+  // Restore card area
+  document.getElementById('cardArea').innerHTML = `
+    <div class="card" id="card" onclick="revealMeaning()">
+      <div class="card-position" id="cardPos"></div>
+      <div class="card-badge" id="cardBadge"></div>
+      <div class="card-viet" id="cardViet"></div>
+      <div class="card-english" id="cardEnglish"></div>
+      <div class="card-freq" id="cardFreq"></div>
+      <div class="card-practiced" id="cardPracticed"></div>
+    </div>
+    <div class="tap-hint" id="tapHint">Tap card to reveal meaning</div>
+  `;
+
+  if (currentMode === 'new') {
+    setMode('review');
+  } else {
+    buildQueue();
+    showCard();
+  }
+}
+
+init();
+</script>
+</body>
+</html>
