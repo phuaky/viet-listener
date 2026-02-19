@@ -506,6 +506,21 @@ const server = Bun.serve({
       return res;
     }
 
+    // Practice progress (server-side persistence)
+    if (url.pathname === '/api/progress' && req.method === 'GET') {
+      const file = Bun.file('./practice-progress.json');
+      if (await file.exists()) {
+        return Response.json(await file.json(), { headers: corsHeaders });
+      }
+      return Response.json({}, { headers: corsHeaders });
+    }
+
+    if (url.pathname === '/api/progress' && req.method === 'POST') {
+      const body = await req.json();
+      await Bun.write('./practice-progress.json', JSON.stringify(body, null, 2));
+      return Response.json({ saved: true }, { headers: corsHeaders });
+    }
+
     // API key check endpoint
     if (url.pathname === '/api/status') {
       return Response.json({

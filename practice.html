@@ -386,9 +386,24 @@ async function init() {
   const res = await fetch('/lessons.json');
   lessons = await res.json();
 
-  // Load progress from localStorage
-  const saved = localStorage.getItem('viet-practice-progress');
-  if (saved) progress = JSON.parse(saved);
+  // Load progress from server first, fall back to localStorage
+  try {
+    const serverRes = await fetch('/api/progress');
+    const serverData = await serverRes.json();
+    if (Object.keys(serverData).length > 0) {
+      progress = serverData;
+    } else {
+      // Migrate from localStorage if server is empty
+      const saved = localStorage.getItem('viet-practice-progress');
+      if (saved) {
+        progress = JSON.parse(saved);
+        saveProgress(); // sync to server
+      }
+    }
+  } catch {
+    const saved = localStorage.getItem('viet-practice-progress');
+    if (saved) progress = JSON.parse(saved);
+  }
 
   // Count today's practice
   todayPracticed = Object.values(progress).filter(p => p.lastDate === today).length;
@@ -399,8 +414,19 @@ async function init() {
   showCard();
 }
 
+let saveTimer = null;
 function saveProgress() {
+  // Save to localStorage immediately
   localStorage.setItem('viet-practice-progress', JSON.stringify(progress));
+  // Debounce server save (every 2 seconds)
+  clearTimeout(saveTimer);
+  saveTimer = setTimeout(() => {
+    fetch('/api/progress', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(progress),
+    }).catch(() => {}); // silent fail — localStorage is backup
+  }, 2000);
 }
 
 function renderTiers() {
