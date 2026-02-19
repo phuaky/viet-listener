@@ -1,0 +1,14 @@
+node_modules/
+.env
+bun.lock
+*.md.bak
+.DS_Store
+
+# Audio files (too large for git)
+*.m4a
+*.wav
+*.mp3
+*.ogg
+
+# Personal data (family conversation transcripts + outputs)
+tet-dinner/

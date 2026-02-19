@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Viet Listener - Vietnamese Vocabulary Builder</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg: #0f0f0f;
+    --surface: #1a1a1a;
+    --surface2: #242424;
+    --border: #333;
+    --text: #e0e0e0;
+    --text-dim: #888;
+    --accent: #4fc3f7;
+    --accent2: #81c784;
+    --accent3: #ffb74d;
+    --danger: #ef5350;
+    --viet: #ffeb3b;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Header */
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .header h1 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--accent);
+  }
+
+  .header h1 span {
+    color: var(--viet);
+  }
+
+  .stats {
+    display: flex;
+    gap: 16px;
+    font-size: 13px;
+    color: var(--text-dim);
+  }
+
+  .stats strong { color: var(--accent); }
+
+  /* Mode Toggle */
+  .mode-toggle {
+    display: flex;
+    background: var(--surface2);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+  }
+
+  .mode-btn {
+    padding: 10px 24px;
+    border: none;
+    background: transparent;
+    color: var(--text-dim);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .mode-btn.active {
+    background: var(--accent);
+    color: #000;
+  }
+
+  .mode-btn:hover:not(.active) {
+    background: var(--surface);
+    color: var(--text);
+  }
+
+  /* Main Layout */
+  .main {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+  }
+
+  /* Content Area */
+  .content {
+    flex: 1;
+    padding: 24px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  /* Mic Button */
+  .mic-area {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    background: var(--surface);
+    border-radius: 12px;
+    border: 1px solid var(--border);
+  }
+
+  .mic-btn {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 2px solid var(--accent);
+    background: transparent;
+    color: var(--accent);
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .mic-btn.listening {
+    background: var(--danger);
+    border-color: var(--danger);
+    color: white;
+    animation: pulse 1.5s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(239, 83, 80, 0.4); }
+    50% { box-shadow: 0 0 0 12px rgba(239, 83, 80, 0); }
+  }
+
+  .mic-status {
+    font-size: 14px;
+    color: var(--text-dim);
+  }
+
+  .mic-status .lang {
+    font-size: 12px;
+    color: var(--accent);
+    margin-top: 4px;
+  }
+
+  /* Transcription Area */
+  .transcription {
+    background: var(--surface);
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    padding: 20px;
+    min-height: 120px;
+  }
+
+  .transcription-label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-dim);
+    margin-bottom: 12px;
+  }
+
+  .transcript-text {
+    font-size: 18px;
+    line-height: 1.6;
+    min-height: 40px;
+    color: var(--text-dim);
+  }
+
+  .transcript-text.has-text {
+    color: var(--text);
+  }
+
+  .interim {
+    color: var(--text-dim);
+    font-style: italic;
+  }
+
+  /* Word Cards */
+  .words-section {
+    background: var(--surface);
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    padding: 20px;
+  }
+
+  .words-label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-dim);
+    margin-bottom: 12px;
+  }
+
+  .word-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .word-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 14px;
+    background: var(--surface2);
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    transition: all 0.2s;
+  }
+
+  .word-card:hover {
+    border-color: var(--accent);
+  }
+
+  .word-card .viet {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--viet);
+  }
+
+  .word-card .eng {
+    font-size: 11px;
+    color: var(--accent);
+    margin-top: 2px;
+  }
+
+  .word-card .count {
+    font-size: 10px;
+    color: var(--text-dim);
+    margin-top: 2px;
+  }
+
+  .word-card.unknown {
+    border-color: var(--danger);
+    opacity: 0.7;
+  }
+
+  .word-card.unknown .eng {
+    color: var(--danger);
+  }
+
+  /* Reply Suggestions */
+  .suggestions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .suggestion-card {
+    padding: 16px;
+    background: var(--surface2);
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .suggestion-card:hover {
+    border-color: var(--accent2);
+    background: #1e2e1e;
+  }
+
+  .suggestion-card .rank {
+    font-size: 11px;
+    color: var(--text-dim);
+    margin-bottom: 6px;
+  }
+
+  .suggestion-card .viet-text {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--viet);
+    margin-bottom: 4px;
+  }
+
+  .suggestion-card .eng-text {
+    font-size: 14px;
+    color: var(--text-dim);
+    margin-bottom: 8px;
+  }
+
+  .suggestion-card .vocab-match {
+    font-size: 11px;
+    color: var(--accent2);
+  }
+
+  .suggestion-card .vocab-match .known {
+    background: rgba(129, 199, 132, 0.15);
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin: 0 2px;
+  }
+
+  /* Sidebar */
+  .sidebar {
+    width: 280px;
+    background: var(--surface);
+    border-left: 1px solid var(--border);
+    padding: 20px;
+    overflow-y: auto;
+    flex-shrink: 0;
+  }
+
+  .sidebar-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 4px;
+  }
+
+  .sidebar-subtitle {
+    font-size: 11px;
+    color: var(--text-dim);
+    margin-bottom: 16px;
+  }
+
+  .top-word-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 10px;
+    border-radius: 6px;
+    margin-bottom: 4px;
+    transition: background 0.15s;
+  }
+
+  .top-word-item:hover {
+    background: var(--surface2);
+  }
+
+  .top-word-item .rank-num {
+    font-size: 12px;
+    color: var(--text-dim);
+    width: 24px;
+    flex-shrink: 0;
+  }
+
+  .top-word-item .word-info {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .top-word-item .vi-word {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--viet);
+  }
+
+  .top-word-item .en-word {
+    font-size: 11px;
+    color: var(--text-dim);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .top-word-item .freq-count {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent);
+    flex-shrink: 0;
+    margin-left: 8px;
+  }
+
+  .freq-bar {
+    height: 3px;
+    background: var(--accent);
+    border-radius: 2px;
+    margin-top: 4px;
+    opacity: 0.4;
+    transition: width 0.3s;
+  }
+
+  .clear-btn {
+    margin-top: 16px;
+    width: 100%;
+    padding: 8px;
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-dim);
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+  }
+
+  .clear-btn:hover {
+    border-color: var(--danger);
+    color: var(--danger);
+  }
+
+  /* Empty State */
+  .empty-state {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--text-dim);
+  }
+
+  .empty-state .icon {
+    font-size: 48px;
+    margin-bottom: 12px;
+    opacity: 0.3;
+  }
+
+  .empty-state p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .main { flex-direction: column; }
+    .sidebar {
+      width: 100%;
+      border-left: none;
+      border-top: 1px solid var(--border);
+      max-height: 300px;
+    }
+  }
+
+  /* Notification */
+  .notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 12px 20px;
+    background: var(--surface2);
+    border: 1px solid var(--accent);
+    border-radius: 8px;
+    color: var(--accent);
+    font-size: 13px;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s;
+    z-index: 100;
+    pointer-events: none;
+  }
+
+  .notification.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <h1>Viet <span>Listener</span></h1>
+
+  <div class="mode-toggle">
+    <button class="mode-btn active" data-mode="listen" onclick="setMode('listen')">
+      Listen (VI)
+    </button>
+    <button class="mode-btn" data-mode="reply" onclick="setMode('reply')">
+      Reply (EN)
+    </button>
+  </div>
+
+  <div class="stats">
+    <span>Words learned: <strong id="total-words">0</strong></span>
+    <span>Total heard: <strong id="total-heard">0</strong></span>
+  </div>
+</div>
+
+<!-- Main -->
+<div class="main">
+  <div class="content">
+
+    <!-- Mic Area -->
+    <div class="mic-area">
+      <button class="mic-btn" id="mic-btn" onclick="toggleMic()">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+          <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+          <line x1="12" y1="19" x2="12" y2="23"/>
+          <line x1="8" y1="23" x2="16" y2="23"/>
+        </svg>
+      </button>
+      <div class="mic-status">
+        <div id="mic-status-text">Click microphone to start listening</div>
+        <div class="lang" id="mic-lang">Language: Vietnamese (vi-VN)</div>
+      </div>
+    </div>
+
+    <!-- Transcription -->
+    <div class="transcription">
+      <div class="transcription-label" id="transcription-label">Transcription</div>
+      <div class="transcript-text" id="transcript">
+        Waiting for speech...
+      </div>
+    </div>
+
+    <!-- Sentence Translation (shown when API is available) -->
+    <div class="transcription" id="sentence-translation-box" style="display:none; border-color: var(--accent2);">
+      <div class="transcription-label" style="color: var(--accent2);">Sentence Meaning</div>
+      <div class="transcript-text has-text" id="sentence-translation" style="color: var(--accent2); font-size: 20px;">
+      </div>
+    </div>
+
+    <!-- Word Cards (Listen mode) -->
+    <div id="listen-output">
+      <div class="words-section">
+        <div class="words-label">Detected Words</div>
+        <div class="word-cards" id="word-cards">
+          <div class="empty-state" id="words-empty">
+            <div class="icon">🎧</div>
+            <p>Vietnamese words will appear here with<br>English translations as you listen</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reply Suggestions (Reply mode) -->
+    <div id="reply-output" style="display:none">
+      <div class="words-section">
+        <div class="words-label">Vietnamese Response Suggestions</div>
+        <div class="suggestions" id="suggestions">
+          <div class="empty-state" id="suggestions-empty">
+            <div class="icon">💬</div>
+            <p>Speak in English and I'll suggest Vietnamese<br>responses using words you've learned</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Sidebar: Top Words -->
+  <div class="sidebar">
+    <div class="sidebar-title">Top Words</div>
+    <div class="sidebar-subtitle">Most frequently heard vocabulary</div>
+    <div id="top-words-list">
+      <div class="empty-state">
+        <p style="font-size:12px">No words tracked yet.<br>Start listening to build your vocabulary.</p>
+      </div>
+    </div>
+    <button class="clear-btn" onclick="clearHistory()">Clear Word History</button>
+  </div>
+</div>
+
+<!-- Notification -->
+<div class="notification" id="notification"></div>
+
+<script>
+// =============================================
+// STATE
+// =============================================
+let mode = 'listen'; // 'listen' or 'reply'
+let isListening = false;
+let recognition = null;
+let dictionary = {};
+let responses = [];
+let wordFrequency = {}; // { word: count }
+let currentSessionWords = []; // words from current transcript segment
+let useApi = false; // Whether backend API is available
+
+// =============================================
+// INIT
+// =============================================
+async function init() {
+  // Load word frequency from localStorage
+  const saved = localStorage.getItem('viet-listener-freq');
+  if (saved) {
+    try { wordFrequency = JSON.parse(saved); } catch(e) { wordFrequency = {}; }
+  }
+
+  // Load dictionary
+  try {
+    const res = await fetch('dictionary.json');
+    dictionary = await res.json();
+    console.log(`Dictionary loaded: ${Object.keys(dictionary).length} words`);
+  } catch(e) {
+    console.warn('Dictionary not loaded, using empty:', e);
+    dictionary = {};
+  }
+
+  // Load responses (fallback for when API is not available)
+  try {
+    const res = await fetch('responses.json');
+    responses = await res.json();
+    console.log(`Responses loaded: ${responses.length} templates`);
+  } catch(e) {
+    console.warn('Responses not loaded:', e);
+    responses = [];
+  }
+
+  // Check if backend API is available (with Google Translate)
+  try {
+    const res = await fetch('/api/status');
+    if (res.ok) {
+      const status = await res.json();
+      useApi = status.hasApiKey;
+      if (useApi) {
+        console.log('✅ Google Translate API available — using AI translation');
+        notify('Google Translate connected — AI translation active');
+      } else {
+        console.log('⚠️ Server running but no API key — using dictionary fallback');
+        notify('No API key — using dictionary mode. Set GOOGLE_TRANSLATE_API_KEY for AI translation.');
+      }
+    }
+  } catch(e) {
+    console.log('ℹ️ No backend server — using dictionary-only mode');
+    useApi = false;
+  }
+
+  // Setup speech recognition
+  setupRecognition();
+
+  // Render
+  updateStats();
+  renderTopWords();
+}
+
+// =============================================
+// SPEECH RECOGNITION
+// =============================================
+function setupRecognition() {
+  const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if (!SpeechRecognition) {
+    notify('Speech recognition not supported. Please use Chrome.');
+    return;
+  }
+
+  recognition = new SpeechRecognition();
+  recognition.continuous = true;
+  recognition.interimResults = true;
+  recognition.maxAlternatives = 1;
+  setRecognitionLang();
+
+  recognition.onresult = (event) => {
+    let interim = '';
+    let finalTranscript = '';
+
+    for (let i = event.resultIndex; i < event.results.length; i++) {
+      const transcript = event.results[i][0].transcript;
+      if (event.results[i].isFinal) {
+        finalTranscript += transcript;
+      } else {
+        interim += transcript;
+      }
+    }
+
+    // Update display
+    const el = document.getElementById('transcript');
+    if (finalTranscript) {
+      el.innerHTML = finalTranscript;
+      el.classList.add('has-text');
+      processTranscript(finalTranscript);
+    } else if (interim) {
+      el.innerHTML = interim + '<span class="interim"> ...</span>';
+      el.classList.add('has-text');
+      // Show interim words in listen mode too
+      if (mode === 'listen') {
+        showInterimWords(interim);
+      }
+    }
+  };
+
+  recognition.onerror = (event) => {
+    console.error('Speech error:', event.error);
+    if (event.error === 'not-allowed') {
+      notify('Microphone access denied. Please allow microphone access.');
+    } else if (event.error !== 'no-speech' && event.error !== 'aborted') {
+      notify(`Speech error: ${event.error}`);
+    }
+  };
+
+  recognition.onend = () => {
+    // Auto-restart if still supposed to be listening
+    if (isListening) {
+      try { recognition.start(); } catch(e) {}
+    }
+  };
+}
+
+function setRecognitionLang() {
+  if (!recognition) return;
+  if (mode === 'listen') {
+    recognition.lang = 'vi-VN';
+    document.getElementById('mic-lang').textContent = 'Language: Vietnamese (vi-VN)';
+  } else {
+    recognition.lang = 'en-US';
+    document.getElementById('mic-lang').textContent = 'Language: English (en-US)';
+  }
+}
+
+function toggleMic() {
+  if (isListening) {
+    stopListening();
+  } else {
+    startListening();
+  }
+}
+
+function startListening() {
+  if (!recognition) {
+    setupRecognition();
+    if (!recognition) return;
+  }
+
+  try {
+    recognition.start();
+    isListening = true;
+    document.getElementById('mic-btn').classList.add('listening');
+    document.getElementById('mic-status-text').textContent =
+      mode === 'listen' ? 'Listening for Vietnamese...' : 'Listening for English...';
+  } catch(e) {
+    console.error('Start error:', e);
+  }
+}
+
+function stopListening() {
+  isListening = false;
+  if (recognition) {
+    try { recognition.stop(); } catch(e) {}
+  }
+  document.getElementById('mic-btn').classList.remove('listening');
+  document.getElementById('mic-status-text').textContent = 'Click microphone to start listening';
+}
+
+// =============================================
+// PROCESS TRANSCRIPT
+// =============================================
+function processTranscript(text) {
+  if (mode === 'listen') {
+    processVietnamese(text);
+  } else {
+    processEnglish(text);
+  }
+}
+
+async function processVietnamese(text) {
+  if (useApi) {
+    // Use backend API for proper sentence translation + word segmentation
+    try {
+      const res = await fetch('/api/translate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ text, mode: 'vi-to-en' }),
+      });
+      const data = await res.json();
+
+      // Show sentence-level translation
+      const sentBox = document.getElementById('sentence-translation-box');
+      const sentText = document.getElementById('sentence-translation');
+      sentBox.style.display = '';
+      sentText.textContent = data.sentence.translation;
+
+      // Track word frequency from API-segmented words
+      currentSessionWords = [];
+      data.words.forEach(w => {
+        const lower = w.word.toLowerCase().trim();
+        if (!lower || lower.length < 1) return;
+        wordFrequency[lower] = (wordFrequency[lower] || 0) + 1;
+        currentSessionWords.push(lower);
+      });
+      saveFrequency();
+
+      // Render word cards with API translations
+      renderWordCardsFromApi(data.words);
+      renderTopWords();
+      updateStats();
+    } catch(err) {
+      console.error('API translation failed, falling back to dictionary:', err);
+      processVietnameseFallback(text);
+    }
+  } else {
+    processVietnameseFallback(text);
+  }
+}
+
+function processVietnameseFallback(text) {
+  // Original dictionary-only approach
+  const words = segmentVietnamese(text);
+  currentSessionWords = [];
+
+  words.forEach(word => {
+    const lower = word.toLowerCase().trim();
+    if (!lower || lower.length < 1) return;
+    wordFrequency[lower] = (wordFrequency[lower] || 0) + 1;
+    currentSessionWords.push(lower);
+  });
+
+  saveFrequency();
+  renderWordCards(currentSessionWords);
+  renderTopWords();
+  updateStats();
+
+  // Hide sentence translation box in fallback mode
+  document.getElementById('sentence-translation-box').style.display = 'none';
+}
+
+function showInterimWords(text) {
+  const words = segmentVietnamese(text);
+  const displayWords = words.map(w => w.toLowerCase().trim()).filter(w => w.length > 0);
+  renderWordCards(displayWords, true);
+}
+
+async function processEnglish(text) {
+  const englishInput = text.trim();
+  if (!englishInput) return;
+
+  if (useApi) {
+    await generateSuggestionsApi(englishInput);
+  } else {
+    generateSuggestions(englishInput.toLowerCase());
+  }
+}
+
+// =============================================
+// VIETNAMESE WORD SEGMENTATION
+// =============================================
+function segmentVietnamese(text) {
+  // Clean the text
+  let cleaned = text.trim()
+    .replace(/[.,!?;:"""''()[\]{}]/g, ' ')
+    .replace(/\s+/g, ' ');
+
+  // Try to match multi-word dictionary entries first
+  const words = [];
+  const syllables = cleaned.split(' ').filter(s => s.length > 0);
+
+  let i = 0;
+  while (i < syllables.length) {
+    let matched = false;
+
+    // Try longest match first (up to 4 syllables)
+    for (let len = Math.min(4, syllables.length - i); len > 1; len--) {
+      const compound = syllables.slice(i, i + len).join(' ');
+      if (dictionary[compound] || dictionary[compound.toLowerCase()]) {
+        words.push(compound);
+        i += len;
+        matched = true;
+        break;
+      }
+    }
+
+    if (!matched) {
+      words.push(syllables[i]);
+      i++;
+    }
+  }
+
+  return words;
+}
+
+// =============================================
+// REPLY MODE: GENERATE SUGGESTIONS
+// =============================================
+function generateSuggestions(englishText) {
+  const inputWords = englishText.split(/\s+/).map(w =>
+    w.replace(/[.,!?;:]/g, '').toLowerCase()
+  );
+
+  // Score each response template
+  const scored = responses.map(r => {
+    // Intent match score
+    let intentScore = 0;
+    r.intent.forEach(intent => {
+      const intentWords = intent.split(' ');
+      // Check if any input word matches intent keywords
+      inputWords.forEach(iw => {
+        if (intent.includes(iw) || iw.includes(intent)) {
+          intentScore += 2;
+        }
+        intentWords.forEach(intW => {
+          if (iw === intW || iw.includes(intW) || intW.includes(iw)) {
+            intentScore += 1;
+          }
+        });
+      });
+
+      // Check if full intent phrase is in input
+      if (englishText.includes(intent)) {
+        intentScore += 3;
+      }
+    });
+
+    // Vocabulary familiarity score (how many response words are in user's learned vocab)
+    let vocabScore = 0;
+    let knownWords = [];
+    let totalWords = r.words.length;
+
+    r.words.forEach(w => {
+      const lower = w.toLowerCase();
+      if (wordFrequency[lower]) {
+        vocabScore += Math.log2(wordFrequency[lower] + 1); // Weight by frequency
+        knownWords.push(lower);
+      }
+    });
+
+    const vocabRatio = totalWords > 0 ? knownWords.length / totalWords : 0;
+
+    return {
+      ...r,
+      intentScore,
+      vocabScore,
+      vocabRatio,
+      knownWords,
+      totalScore: intentScore * 3 + vocabScore * 2 + vocabRatio * 5
+    };
+  });
+
+  // Filter to only responses with some intent match, then sort
+  let matches = scored
+    .filter(s => s.intentScore > 0)
+    .sort((a, b) => b.totalScore - a.totalScore)
+    .slice(0, 3);
+
+  // If no intent matches, show most vocabulary-familiar responses
+  if (matches.length === 0) {
+    matches = scored
+      .sort((a, b) => b.vocabScore - a.vocabScore)
+      .slice(0, 3);
+  }
+
+  renderSuggestions(matches);
+}
+
+// =============================================
+// API-BASED SUGGESTION GENERATION
+// =============================================
+async function generateSuggestionsApi(englishText) {
+  try {
+    const res = await fetch('/api/suggest', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ englishText, learnedWords: wordFrequency }),
+    });
+    const data = await res.json();
+
+    if (data.suggestions && data.suggestions.length > 0) {
+      renderSuggestionsFromApi(data.suggestions);
+    } else {
+      notify('No suggestions generated');
+    }
+  } catch(err) {
+    console.error('API suggest failed, falling back:', err);
+    generateSuggestions(englishText.toLowerCase());
+  }
+}
+
+function renderSuggestionsFromApi(suggestions) {
+  const container = document.getElementById('suggestions');
+  const empty = document.getElementById('suggestions-empty');
+  if (empty) empty.style.display = 'none';
+
+  container.innerHTML = suggestions.map((s, i) => {
+    const wordHighlight = s.words.map(w => {
+      if (w.known) {
+        return `<span class="known">${escapeHtml(w.word)}</span>`;
+      }
+      return escapeHtml(w.word);
+    }).join(' ');
+
+    const pct = Math.round(s.knownRatio * 100);
+
+    return `
+      <div class="suggestion-card" onclick="speakVietnamese('${escapeAttr(s.vietnamese)}')">
+        <div class="rank">#${i + 1} suggestion ${pct > 0 ? `· ${pct}% words known` : ''} · via Google Translate</div>
+        <div class="viet-text">${escapeHtml(s.vietnamese)}</div>
+        <div class="eng-text">${escapeHtml(s.english)}</div>
+        <div class="vocab-match">Words: ${wordHighlight}</div>
+      </div>
+    `;
+  }).join('');
+}
+
+// =============================================
+// RENDERING (API word cards)
+// =============================================
+function renderWordCardsFromApi(apiWords) {
+  const container = document.getElementById('word-cards');
+  const empty = document.getElementById('words-empty');
+
+  if (apiWords.length === 0) {
+    if (empty) empty.style.display = '';
+    return;
+  }
+
+  if (empty) empty.style.display = 'none';
+
+  const seen = new Set();
+  const uniqueWords = apiWords.filter(w => {
+    const lower = w.word.toLowerCase();
+    if (seen.has(lower)) return false;
+    seen.add(lower);
+    return true;
+  });
+
+  container.innerHTML = uniqueWords.map(w => {
+    const lower = w.word.toLowerCase();
+    const count = wordFrequency[lower] || 0;
+    const source = w.fromDictionary ? 'dict' : 'AI';
+
+    return `
+      <div class="word-card">
+        <div class="viet">${escapeHtml(w.word)}</div>
+        <div class="eng">${escapeHtml(w.translation)}</div>
+        ${count > 0 ? `<div class="count">x${count}</div>` : ''}
+        <div class="count" style="color: ${w.fromDictionary ? 'var(--text-dim)' : 'var(--accent2)'}">${source}</div>
+      </div>
+    `;
+  }).join('');
+}
+
+// =============================================
+// RENDERING (dictionary fallback)
+// =============================================
+function renderWordCards(words, isInterim = false) {
+  const container = document.getElementById('word-cards');
+  const empty = document.getElementById('words-empty');
+
+  if (words.length === 0) {
+    if (empty) empty.style.display = '';
+    return;
+  }
+
+  if (empty) empty.style.display = 'none';
+
+  // Only show unique words from this segment
+  const seen = new Set();
+  const uniqueWords = words.filter(w => {
+    const lower = w.toLowerCase();
+    if (seen.has(lower)) return false;
+    seen.add(lower);
+    return true;
+  });
+
+  container.innerHTML = uniqueWords.map(word => {
+    const lower = word.toLowerCase();
+    const translation = lookupWord(lower);
+    const count = wordFrequency[lower] || 0;
+    const isUnknown = !translation;
+
+    return `
+      <div class="word-card ${isUnknown ? 'unknown' : ''}" style="${isInterim ? 'opacity:0.6' : ''}">
+        <div class="viet">${escapeHtml(word)}</div>
+        <div class="eng">${translation ? escapeHtml(translation) : '?'}</div>
+        ${count > 0 ? `<div class="count">x${count}</div>` : ''}
+      </div>
+    `;
+  }).join('');
+}
+
+function lookupWord(word) {
+  const lower = word.toLowerCase();
+  // Direct match
+  if (dictionary[lower]) return dictionary[lower];
+  if (dictionary[word]) return dictionary[word];
+
+  // Try capitalized
+  const cap = word.charAt(0).toUpperCase() + word.slice(1);
+  if (dictionary[cap]) return dictionary[cap];
+
+  return null;
+}
+
+function renderSuggestions(matches) {
+  const container = document.getElementById('suggestions');
+  const empty = document.getElementById('suggestions-empty');
+
+  if (matches.length === 0) {
+    if (empty) empty.style.display = '';
+    container.innerHTML = empty ? empty.outerHTML : '';
+    return;
+  }
+
+  if (empty) empty.style.display = 'none';
+
+  container.innerHTML = matches.map((m, i) => {
+    const knownHighlight = m.words.map(w => {
+      const lower = w.toLowerCase();
+      if (m.knownWords.includes(lower)) {
+        return `<span class="known">${escapeHtml(w)}</span>`;
+      }
+      return escapeHtml(w);
+    }).join(' ');
+
+    const pct = Math.round(m.vocabRatio * 100);
+
+    return `
+      <div class="suggestion-card" onclick="speakVietnamese('${escapeAttr(m.vi)}')">
+        <div class="rank">#${i + 1} suggestion ${pct > 0 ? `· ${pct}% words known` : ''}</div>
+        <div class="viet-text">${escapeHtml(m.vi)}</div>
+        <div class="eng-text">${escapeHtml(m.en)}</div>
+        <div class="vocab-match">Words: ${knownHighlight}</div>
+      </div>
+    `;
+  }).join('');
+}
+
+function renderTopWords() {
+  const container = document.getElementById('top-words-list');
+
+  // Sort by frequency
+  const sorted = Object.entries(wordFrequency)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 30);
+
+  if (sorted.length === 0) {
+    container.innerHTML = `
+      <div class="empty-state">
+        <p style="font-size:12px">No words tracked yet.<br>Start listening to build your vocabulary.</p>
+      </div>
+    `;
+    return;
+  }
+
+  const maxCount = sorted[0][1];
+
+  // Collect unknown words for batch API translation
+  const unknowns = sorted.filter(([word]) => !lookupWord(word)).map(([word]) => word);
+
+  // If API available and there are unknowns, fetch translations
+  if (useApi && unknowns.length > 0) {
+    fetch('/api/translate', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ text: unknowns.join(', '), mode: 'vi-to-en' }),
+    }).then(r => r.json()).then(data => {
+      // Cache the API translations in a temporary lookup
+      if (data.words) {
+        data.words.forEach(w => {
+          if (!dictionary[w.word.toLowerCase()]) {
+            dictionary[w.word.toLowerCase()] = w.translation;
+          }
+        });
+        // Re-render with updated dictionary
+        renderTopWordsInner(sorted, maxCount, container);
+      }
+    }).catch(() => {});
+  }
+
+  renderTopWordsInner(sorted, maxCount, container);
+}
+
+function renderTopWordsInner(sorted, maxCount, container) {
+  container.innerHTML = sorted.map(([word, count], i) => {
+    const translation = lookupWord(word) || '?';
+    const barWidth = Math.round((count / maxCount) * 100);
+
+    return `
+      <div class="top-word-item">
+        <div class="rank-num">${i + 1}</div>
+        <div class="word-info">
+          <div class="vi-word">${escapeHtml(word)}</div>
+          <div class="en-word">${escapeHtml(translation)}</div>
+          <div class="freq-bar" style="width:${barWidth}%"></div>
+        </div>
+        <div class="freq-count">${count}</div>
+      </div>
+    `;
+  }).join('');
+}
+
+function updateStats() {
+  const uniqueWords = Object.keys(wordFrequency).length;
+  const totalHeard = Object.values(wordFrequency).reduce((a, b) => a + b, 0);
+
+  document.getElementById('total-words').textContent = uniqueWords;
+  document.getElementById('total-heard').textContent = totalHeard;
+}
+
+// =============================================
+// MODE SWITCHING
+// =============================================
+function setMode(newMode) {
+  // Stop listening first
+  if (isListening) stopListening();
+
+  mode = newMode;
+
+  // Update toggle buttons
+  document.querySelectorAll('.mode-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.mode === mode);
+  });
+
+  // Update language
+  setRecognitionLang();
+
+  // Show/hide sections
+  document.getElementById('listen-output').style.display = mode === 'listen' ? '' : 'none';
+  document.getElementById('reply-output').style.display = mode === 'reply' ? '' : 'none';
+
+  // Update labels
+  document.getElementById('transcription-label').textContent =
+    mode === 'listen' ? 'Vietnamese Transcription' : 'English Input';
+
+  // Reset transcript
+  const el = document.getElementById('transcript');
+  el.innerHTML = mode === 'listen'
+    ? 'Waiting for Vietnamese speech...'
+    : 'Speak in English to get Vietnamese suggestions...';
+  el.classList.remove('has-text');
+
+  document.getElementById('mic-status-text').textContent = 'Click microphone to start listening';
+}
+
+// =============================================
+// TEXT-TO-SPEECH (for suggestions)
+// =============================================
+function speakVietnamese(text) {
+  if ('speechSynthesis' in window) {
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = 'vi-VN';
+    utterance.rate = 0.85;
+    speechSynthesis.speak(utterance);
+    notify(`Speaking: ${text}`);
+  }
+}
+
+// =============================================
+// PERSISTENCE
+// =============================================
+function saveFrequency() {
+  localStorage.setItem('viet-listener-freq', JSON.stringify(wordFrequency));
+}
+
+function clearHistory() {
+  if (confirm('Clear all word frequency history?')) {
+    wordFrequency = {};
+    saveFrequency();
+    renderTopWords();
+    updateStats();
+    notify('Word history cleared');
+  }
+}
+
+// =============================================
+// UTILITIES
+// =============================================
+function escapeHtml(str) {
+  const div = document.createElement('div');
+  div.textContent = str;
+  return div.innerHTML;
+}
+
+function escapeAttr(str) {
+  return str.replace(/'/g, "\\'").replace(/"/g, '&quot;');
+}
+
+function notify(msg) {
+  const el = document.getElementById('notification');
+  el.textContent = msg;
+  el.classList.add('show');
+  setTimeout(() => el.classList.remove('show'), 2500);
+}
+
+// =============================================
+// START
+// =============================================
+init();
+</script>
+</body>
+</html>

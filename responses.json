@@ -1,0 +1,398 @@
+[
+  {
+    "vi": "Xin chào",
+    "en": "Hello",
+    "intent": ["greeting", "hello", "hi", "hey"],
+    "words": ["xin", "chào"]
+  },
+  {
+    "vi": "Chào bạn",
+    "en": "Hi there (to a friend)",
+    "intent": ["greeting", "hello", "hi", "hey", "friend"],
+    "words": ["chào", "bạn"]
+  },
+  {
+    "vi": "Tôi khỏe, cảm ơn",
+    "en": "I'm fine, thank you",
+    "intent": ["fine", "good", "well", "how are you", "okay"],
+    "words": ["tôi", "khỏe", "cảm", "ơn"]
+  },
+  {
+    "vi": "Cảm ơn bạn",
+    "en": "Thank you",
+    "intent": ["thank", "thanks", "appreciate"],
+    "words": ["cảm", "ơn", "bạn"]
+  },
+  {
+    "vi": "Cảm ơn rất nhiều",
+    "en": "Thank you very much",
+    "intent": ["thank", "thanks", "much", "very", "appreciate", "grateful"],
+    "words": ["cảm", "ơn", "rất", "nhiều"]
+  },
+  {
+    "vi": "Không có gì",
+    "en": "You're welcome",
+    "intent": ["welcome", "no problem", "nothing", "mention"],
+    "words": ["không", "có", "gì"]
+  },
+  {
+    "vi": "Vâng, đúng rồi",
+    "en": "Yes, that's right",
+    "intent": ["yes", "right", "correct", "agree", "true"],
+    "words": ["vâng", "đúng", "rồi"]
+  },
+  {
+    "vi": "Không, không phải",
+    "en": "No, that's not right",
+    "intent": ["no", "not", "wrong", "disagree", "incorrect"],
+    "words": ["không", "phải"]
+  },
+  {
+    "vi": "Tôi hiểu rồi",
+    "en": "I understand",
+    "intent": ["understand", "got it", "see", "comprehend", "clear"],
+    "words": ["tôi", "hiểu", "rồi"]
+  },
+  {
+    "vi": "Tôi không hiểu",
+    "en": "I don't understand",
+    "intent": ["don't understand", "confused", "not clear", "what", "pardon"],
+    "words": ["tôi", "không", "hiểu"]
+  },
+  {
+    "vi": "Xin lỗi",
+    "en": "Sorry / Excuse me",
+    "intent": ["sorry", "excuse", "apology", "pardon", "forgive"],
+    "words": ["xin", "lỗi"]
+  },
+  {
+    "vi": "Xin nói chậm hơn",
+    "en": "Please speak slower",
+    "intent": ["slow", "slower", "speak", "fast", "quick", "repeat"],
+    "words": ["xin", "nói", "chậm", "hơn"]
+  },
+  {
+    "vi": "Tôi muốn ăn",
+    "en": "I want to eat",
+    "intent": ["eat", "food", "hungry", "want eat", "meal", "dinner", "lunch"],
+    "words": ["tôi", "muốn", "ăn"]
+  },
+  {
+    "vi": "Tôi muốn uống nước",
+    "en": "I want to drink water",
+    "intent": ["drink", "water", "thirsty", "beverage"],
+    "words": ["tôi", "muốn", "uống", "nước"]
+  },
+  {
+    "vi": "Tôi muốn uống cà phê",
+    "en": "I want to drink coffee",
+    "intent": ["coffee", "cafe", "drink coffee"],
+    "words": ["tôi", "muốn", "uống", "cà", "phê"]
+  },
+  {
+    "vi": "Bao nhiêu tiền?",
+    "en": "How much does it cost?",
+    "intent": ["how much", "cost", "price", "money", "expensive", "cheap"],
+    "words": ["bao", "nhiêu", "tiền"]
+  },
+  {
+    "vi": "Đắt quá",
+    "en": "Too expensive",
+    "intent": ["expensive", "too much", "costly", "pricey"],
+    "words": ["đắt", "quá"]
+  },
+  {
+    "vi": "Rẻ hơn được không?",
+    "en": "Can it be cheaper?",
+    "intent": ["cheaper", "discount", "less", "bargain", "negotiate"],
+    "words": ["rẻ", "hơn", "được", "không"]
+  },
+  {
+    "vi": "Ở đâu?",
+    "en": "Where is it?",
+    "intent": ["where", "location", "place", "find", "direction"],
+    "words": ["ở", "đâu"]
+  },
+  {
+    "vi": "Nhà vệ sinh ở đâu?",
+    "en": "Where is the bathroom?",
+    "intent": ["bathroom", "toilet", "restroom", "washroom"],
+    "words": ["nhà", "vệ", "sinh", "ở", "đâu"]
+  },
+  {
+    "vi": "Tôi muốn đi",
+    "en": "I want to go",
+    "intent": ["go", "leave", "depart", "want go", "travel"],
+    "words": ["tôi", "muốn", "đi"]
+  },
+  {
+    "vi": "Tôi đang học tiếng Việt",
+    "en": "I am learning Vietnamese",
+    "intent": ["learn", "learning", "study", "vietnamese", "language", "practice"],
+    "words": ["tôi", "đang", "học", "tiếng", "Việt"]
+  },
+  {
+    "vi": "Tôi là người nước ngoài",
+    "en": "I am a foreigner",
+    "intent": ["foreigner", "foreign", "not from here", "visitor", "tourist"],
+    "words": ["tôi", "là", "người", "nước", "ngoài"]
+  },
+  {
+    "vi": "Tôi thích cái này",
+    "en": "I like this",
+    "intent": ["like", "enjoy", "this", "good", "nice", "love"],
+    "words": ["tôi", "thích", "cái", "này"]
+  },
+  {
+    "vi": "Tôi không thích",
+    "en": "I don't like it",
+    "intent": ["don't like", "dislike", "hate", "not good", "bad"],
+    "words": ["tôi", "không", "thích"]
+  },
+  {
+    "vi": "Ngon lắm",
+    "en": "Very delicious",
+    "intent": ["delicious", "tasty", "yummy", "good food", "great"],
+    "words": ["ngon", "lắm"]
+  },
+  {
+    "vi": "Được rồi",
+    "en": "Okay / Alright",
+    "intent": ["okay", "ok", "alright", "fine", "sure", "agreed"],
+    "words": ["được", "rồi"]
+  },
+  {
+    "vi": "Chờ một chút",
+    "en": "Wait a moment",
+    "intent": ["wait", "moment", "hold on", "second", "minute"],
+    "words": ["chờ", "một", "chút"]
+  },
+  {
+    "vi": "Tôi cần giúp đỡ",
+    "en": "I need help",
+    "intent": ["help", "need help", "assist", "support", "emergency"],
+    "words": ["tôi", "cần", "giúp", "đỡ"]
+  },
+  {
+    "vi": "Tôi bị lạc",
+    "en": "I am lost",
+    "intent": ["lost", "don't know where", "confused", "direction"],
+    "words": ["tôi", "bị", "lạc"]
+  },
+  {
+    "vi": "Hẹn gặp lại",
+    "en": "See you again",
+    "intent": ["bye", "goodbye", "see you", "later", "farewell"],
+    "words": ["hẹn", "gặp", "lại"]
+  },
+  {
+    "vi": "Tạm biệt",
+    "en": "Goodbye",
+    "intent": ["bye", "goodbye", "farewell", "leaving"],
+    "words": ["tạm", "biệt"]
+  },
+  {
+    "vi": "Tên tôi là...",
+    "en": "My name is...",
+    "intent": ["name", "my name", "call me", "introduce", "who"],
+    "words": ["tên", "tôi", "là"]
+  },
+  {
+    "vi": "Bạn tên gì?",
+    "en": "What is your name?",
+    "intent": ["your name", "who are you", "what name"],
+    "words": ["bạn", "tên", "gì"]
+  },
+  {
+    "vi": "Rất vui được gặp bạn",
+    "en": "Nice to meet you",
+    "intent": ["nice to meet", "pleased", "meeting", "first time"],
+    "words": ["rất", "vui", "được", "gặp", "bạn"]
+  },
+  {
+    "vi": "Tôi đồng ý",
+    "en": "I agree",
+    "intent": ["agree", "yes", "concur", "same", "think so"],
+    "words": ["tôi", "đồng", "ý"]
+  },
+  {
+    "vi": "Tôi không đồng ý",
+    "en": "I disagree",
+    "intent": ["disagree", "no", "different", "don't think so"],
+    "words": ["tôi", "không", "đồng", "ý"]
+  },
+  {
+    "vi": "Có thể",
+    "en": "Maybe / Perhaps",
+    "intent": ["maybe", "perhaps", "possibly", "might", "could be"],
+    "words": ["có", "thể"]
+  },
+  {
+    "vi": "Chắc chắn rồi",
+    "en": "Of course / Certainly",
+    "intent": ["of course", "certainly", "definitely", "sure", "absolutely"],
+    "words": ["chắc", "chắn", "rồi"]
+  },
+  {
+    "vi": "Tôi mệt rồi",
+    "en": "I'm tired",
+    "intent": ["tired", "exhausted", "sleepy", "rest", "fatigue"],
+    "words": ["tôi", "mệt", "rồi"]
+  },
+  {
+    "vi": "Tôi vui lắm",
+    "en": "I'm very happy",
+    "intent": ["happy", "glad", "joy", "pleased", "excited"],
+    "words": ["tôi", "vui", "lắm"]
+  },
+  {
+    "vi": "Tôi buồn",
+    "en": "I'm sad",
+    "intent": ["sad", "unhappy", "down", "depressed"],
+    "words": ["tôi", "buồn"]
+  },
+  {
+    "vi": "Mấy giờ rồi?",
+    "en": "What time is it?",
+    "intent": ["time", "what time", "clock", "hour", "when"],
+    "words": ["mấy", "giờ", "rồi"]
+  },
+  {
+    "vi": "Hôm nay thời tiết đẹp",
+    "en": "The weather is nice today",
+    "intent": ["weather", "nice", "today", "beautiful", "good weather"],
+    "words": ["hôm", "nay", "thời", "tiết", "đẹp"]
+  },
+  {
+    "vi": "Trời nóng quá",
+    "en": "It's so hot",
+    "intent": ["hot", "warm", "heat", "temperature"],
+    "words": ["trời", "nóng", "quá"]
+  },
+  {
+    "vi": "Trời lạnh quá",
+    "en": "It's so cold",
+    "intent": ["cold", "cool", "freezing", "chilly"],
+    "words": ["trời", "lạnh", "quá"]
+  },
+  {
+    "vi": "Tôi muốn mua cái này",
+    "en": "I want to buy this",
+    "intent": ["buy", "purchase", "want this", "shopping", "get this"],
+    "words": ["tôi", "muốn", "mua", "cái", "này"]
+  },
+  {
+    "vi": "Cho tôi xem cái đó",
+    "en": "Show me that one",
+    "intent": ["show", "see", "look", "that one", "let me see"],
+    "words": ["cho", "tôi", "xem", "cái", "đó"]
+  },
+  {
+    "vi": "Tôi đói bụng",
+    "en": "I'm hungry",
+    "intent": ["hungry", "starving", "need food", "eat"],
+    "words": ["tôi", "đói", "bụng"]
+  },
+  {
+    "vi": "Tôi khát nước",
+    "en": "I'm thirsty",
+    "intent": ["thirsty", "need water", "drink"],
+    "words": ["tôi", "khát", "nước"]
+  },
+  {
+    "vi": "Cho tôi cái đó",
+    "en": "Give me that",
+    "intent": ["give", "want", "that", "please", "pass"],
+    "words": ["cho", "tôi", "cái", "đó"]
+  },
+  {
+    "vi": "Tôi sẽ quay lại",
+    "en": "I will come back",
+    "intent": ["come back", "return", "later", "again", "back"],
+    "words": ["tôi", "sẽ", "quay", "lại"]
+  },
+  {
+    "vi": "Nói lại đi",
+    "en": "Say it again",
+    "intent": ["repeat", "again", "say again", "what", "pardon", "one more time"],
+    "words": ["nói", "lại", "đi"]
+  },
+  {
+    "vi": "Tôi biết rồi",
+    "en": "I already know",
+    "intent": ["know", "already", "aware", "understand"],
+    "words": ["tôi", "biết", "rồi"]
+  },
+  {
+    "vi": "Tôi không biết",
+    "en": "I don't know",
+    "intent": ["don't know", "not sure", "no idea", "unsure"],
+    "words": ["tôi", "không", "biết"]
+  },
+  {
+    "vi": "Đi thôi",
+    "en": "Let's go",
+    "intent": ["go", "let's go", "come on", "move", "start"],
+    "words": ["đi", "thôi"]
+  },
+  {
+    "vi": "Tốt lắm",
+    "en": "Very good",
+    "intent": ["good", "great", "excellent", "nice", "well done", "awesome"],
+    "words": ["tốt", "lắm"]
+  },
+  {
+    "vi": "Không sao",
+    "en": "It's okay / No problem",
+    "intent": ["no problem", "okay", "fine", "don't worry", "never mind", "it's alright"],
+    "words": ["không", "sao"]
+  },
+  {
+    "vi": "Tôi yêu Việt Nam",
+    "en": "I love Vietnam",
+    "intent": ["love", "vietnam", "like", "enjoy", "country"],
+    "words": ["tôi", "yêu", "Việt", "Nam"]
+  },
+  {
+    "vi": "Ăn cơm chưa?",
+    "en": "Have you eaten yet?",
+    "intent": ["eaten", "eat", "meal", "food", "how are you", "greeting"],
+    "words": ["ăn", "cơm", "chưa"]
+  },
+  {
+    "vi": "Tôi ăn rồi",
+    "en": "I already ate",
+    "intent": ["ate", "eaten", "already", "full", "had food"],
+    "words": ["tôi", "ăn", "rồi"]
+  },
+  {
+    "vi": "Chưa ăn",
+    "en": "Not yet (haven't eaten)",
+    "intent": ["not yet", "haven't", "no", "still", "waiting"],
+    "words": ["chưa", "ăn"]
+  },
+  {
+    "vi": "Đi đâu đấy?",
+    "en": "Where are you going?",
+    "intent": ["where going", "destination", "heading", "travel"],
+    "words": ["đi", "đâu", "đấy"]
+  },
+  {
+    "vi": "Tôi đi làm",
+    "en": "I'm going to work",
+    "intent": ["work", "office", "job", "going to work"],
+    "words": ["tôi", "đi", "làm"]
+  },
+  {
+    "vi": "Tôi đi chơi",
+    "en": "I'm going out (for fun)",
+    "intent": ["fun", "play", "hang out", "going out", "free time", "leisure"],
+    "words": ["tôi", "đi", "chơi"]
+  },
+  {
+    "vi": "Bạn có khỏe không?",
+    "en": "How are you?",
+    "intent": ["how are you", "how", "feeling", "health", "well"],
+    "words": ["bạn", "có", "khỏe", "không"]
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "name": "viet-listener",
+  "version": "1.0.0",
+  "description": "Vietnamese-English translation toolkit: web app + CLI live transcription + batch audio processing",
+  "module": "server.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "bun run server.ts",
+    "live": "bun run TranscribeLiveVi.ts",
+    "process": "bun run ProcessAudio.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
